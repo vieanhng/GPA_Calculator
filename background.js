@@ -1,4 +1,4 @@
-chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function(message ) {
         if(message.authorizationData){
             chrome.storage.local.set({token: JSON.parse(message.authorizationData).Token});
         }
@@ -84,8 +84,8 @@ function calculateGPA(grades) {
     let totalGradePoints = 0;
 
     for (const grade of grades) {
-        const credits = parseInt(grade.credits);
-        const gradePoints = parseInt(grade.grade);
+        const credits = Number(grade.credits);
+        const gradePoints = Number(grade.grade);
 
         totalCredits += credits;
         totalGradePoints += credits * gradePoints;
