@@ -1,0 +1,14 @@
+.gpa-badge {
+    font-family: Helvetica;
+    position: fixed;
+    top: 10px;
+    right: 190px;
+    padding: 8px;
+    z-index: 9999;
+    /*border: 2px solid #2155aa ;*/
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(145deg, #2155aa, #1c478f);
+    box-shadow:  1px 1px 0px #194081,
+    -1px -1px 0px #255ebd;
+}

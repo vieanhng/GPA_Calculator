@@ -1,0 +1,108 @@
+body {
+    margin:0px;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    background: black;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    font-family: inherit;
+    z-index: 1;
+    display: flow-root;
+
+}
+
+.img {
+    display: flex;
+    margin: 45px auto 10px auto;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    z-index: 99;
+}
+
+img{
+    width:100%;
+}
+
+p {
+    opacity: 1;
+    margin-top: 6px;
+}
+.card-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    display: flow-root;
+
+}
+.heading {
+    padding: 10px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+svg {
+    padding: 0 5px;
+    cursor: pointer;
+    width: 10%;
+    height: 13%;
+    fill: white;
+}
+a {
+    text-decoration: none;
+}
+
+.card:hover .img {
+    transform: scale(1.1);
+}
+
+.card:hover h1,
+.card:hover p {
+    opacity: 1;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#b0e633, #53ef7d);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+    top: -25px;
+    left: -25px;
+}
+
+.circle:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes move-down1 {
+    to {
+        transform: translateY(10px);
+    }
+}
