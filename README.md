@@ -13,6 +13,8 @@ Google Chrome / Microsoft Edge (Custom sites supported)
 4. Enable Developer Mode.
 5. Drag the folder you have unziped anywhere on the page to import it (do not delete the folder afterwards).
 
+## Screeenshot
+![img.png](img.png)
 
 ## Authors
 
