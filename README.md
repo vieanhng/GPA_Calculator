@@ -7,7 +7,7 @@ A extension for congdaotao.tmu.edu.vn to display gpa.
 ## Chức năng
 Tính điểm GPA dựa trên điểm hiện có trong danh sách Kết quả học tập.
 <br/>
-Đã loại trừ các điểm không nằm trong GPA như các học phần thể chất và một số học phần kh tuỳ theo từng khoa. 
+Đã loại trừ các điểm không nằm trong GPA như các học phần thể chất và một số học phần khác tuỳ theo từng khoa. 
 
 ## Download
 
