@@ -4,6 +4,10 @@
 Tiện ích hiển thị GPA trên trang congdaotao.tmu.edu.vn
 A extension for congdaotao.tmu.edu.vn to display gpa.
 
+## Chức năng
+Tính điểm GPA dựa trên điểm hiện có trong danh sách Kết quả học tập
+Đã loại trừ các điểm không nằm trong GPA như các học phần thể chất và một số học phần kh tuỳ theo từng khoa. 
+
 ## Download
 
 [Download extension](https://github.com/vieanhng/GPA_Calculator/archive/refs/heads/main.zip)
