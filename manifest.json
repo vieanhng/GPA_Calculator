@@ -15,7 +15,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://congdaotao.tmu.edu.vn/*"],
+      "matches": ["https://congdaotao.tmu.edu.vn/student/*"],
       "js": ["js/contentScript.js"],
       "css": ["style/style.css"]
     }
