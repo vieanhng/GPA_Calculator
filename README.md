@@ -23,7 +23,7 @@ Google Chrome / Microsoft Edge (Custom sites supported)
 ![img_1.png](img_1.png)
 5. Kéo thư mục bạn đã giải nén vào bất cứ đâu trên trang để nhập nó (không xóa thư mục sau đó).
 ![capture.gif](capture.gif)
-6. Đăng nhập vào congdaotao.tmu.edu.vn 
+6. Đăng nhập vào congdaotao.tmu.edu.vn (Nếu chưa thấy hiện GPA thì bạn thử reload lại page nhe!!)
 ## Screeenshot
 Result:
 ![img.png](img.png)
