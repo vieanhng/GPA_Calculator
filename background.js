@@ -1,3 +1,6 @@
+
+importScripts('js/calculatorGPA.js');
+
 chrome.runtime.onMessage.addListener(function(message ) {
         if(message.authorizationData){
             chrome.storage.local.set({token: JSON.parse(message.authorizationData).Token});
@@ -62,6 +65,7 @@ async function getGPA(token,ctdt){
     const listMarks = await fetch(`https://tmuonlineapi.azurewebsites.net/api/student/marks?ctdt=${ctdt}&loai=SV`, requestOptions)
         .then(response => response.json())
         .then((result) => {
+                chrome.storage.local.set({rawData: JSON.stringify(result)});
                 return result.flatMap(x=>x.DanhSachDiem).flatMap(x=>x.DanhSachDiemHK)
                     .filter(item => item.NotComputeAverageScore == false && item.DiemTK_4).map( (item) => {
                 return {
@@ -76,21 +80,9 @@ async function getGPA(token,ctdt){
         const result = calculateGPA(listMarks)
         return result
     }
-
 }
 
-function calculateGPA(grades) {
-    let totalCredits = 0;
-    let totalGradePoints = 0;
 
-    for (const grade of grades) {
-        const credits = Number(grade.credits);
-        const gradePoints = Number(grade.grade);
 
-        totalCredits += credits;
-        totalGradePoints += credits * gradePoints;
-    }
 
-    return (totalGradePoints / totalCredits).toFixed(2);
-}
 

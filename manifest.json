@@ -1,8 +1,8 @@
 {
   "name": "GPA Calculator for TMUer",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
-  "description": "Extension help calculator gpa faster. Author: vieanhng. Copyright (C) 2023 vieanhng.",
+  "description": "Extension help calculator GPA. Author: vieanhng. Copyright (C) 2023 vieanhng.",
   "permissions": [
     "tabs",
     "storage"
@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["https://congdaotao.tmu.edu.vn/student/*"],
-      "js": ["js/contentScript.js"],
+      "js": ["js/contentScript.js","js/calculatorGPA.js"],
       "css": ["style/style.css"]
     }
   ],

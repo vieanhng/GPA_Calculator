@@ -1,108 +1,113 @@
 body {
     margin:0px;
-    width: 200px;
-    height: 250px;
     border-radius: 10px;
-    background: black;
 }
 
-.card {
-    width: 200px;
-    height: 250px;
-    border-radius: 5px;
-    text-align: center;
-    color: #ffffff;
-    font-family: inherit;
-    z-index: 1;
-    display: flow-root;
-
+.wrapped {
+    width: 250px;
+    height: 300px;
+    background: #EEEEEE;
 }
 
-.img {
-    display: flex;
-    margin: 45px auto 10px auto;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
+.header {
+    width: 100%;
+    height: 40px;
+    background: #ffffff;
+    display: grid;
+}
+
+.title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 700;
+    align-self: center;
+    justify-self: center;
+}
+
+div.year .year-title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 11px;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s;
-    z-index: 99;
-}
-
-img{
-    width:100%;
-}
-
-p {
-    opacity: 1;
-    margin-top: 6px;
-}
-.card-inner {
-    width: inherit;
-    height: inherit;
-    background: rgba(255,255,255,.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
-    backdrop-filter: blur(10px);
-    border-radius: 8px;
-    display: flow-root;
-
-}
-.heading {
-    padding: 10px;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-svg {
-    padding: 0 5px;
+    font-variant: normal;
+    font-weight: 600;
     cursor: pointer;
-    width: 10%;
-    height: 13%;
-    fill: white;
 }
-a {
+
+div.year .gpa {
+    background: #eeeeee;
+    padding: 5px;
+    border-radius: 8px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 600;
+}
+
+div.content .year {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin:15px;
+}
+
+.year-box, .semester-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.semester-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:10px;
+    border-radius: 10px;
+    background: #eeeeee;
+    padding:10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-variant: normal;
+    font-weight: 600;
+}
+
+div.gpa-white{
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 8px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 600;
+}
+
+.full {
+    border: 0.5px solid #000000;
+}
+
+div.content {
+    overflow-y: auto;
+    height:260px;
+}
+
+.footer {
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 400;
+    padding: 7px;
+
+}
+
+.footer a {
     text-decoration: none;
+    color:#000000;
 }
 
-.card:hover .img {
-    transform: scale(1.1);
-}
-
-.card:hover h1,
-.card:hover p {
-    opacity: 1;
-}
-
-.circle {
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(#b0e633, #53ef7d);
-    border-radius: 50%;
-    position: absolute;
-    animation: move-up6 2s ease-in infinite alternate-reverse;
-}
-
-.circle:nth-child(1) {
-    top: -25px;
-    left: -25px;
-}
-
-.circle:nth-child(2) {
-    bottom: -25px;
-    right: -25px;
-    animation-name: move-down1;
-}
-
-@keyframes move-up6 {
-    to {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes move-down1 {
-    to {
-        transform: translateY(10px);
-    }
+.hidden {
+    display: none;
 }
