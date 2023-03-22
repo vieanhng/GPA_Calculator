@@ -1,21 +1,13 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-    let data = [];
+    let data = "";
 
-    chrome.storage.local.get(['rawData'], function (result) {
-        console.log('Value of key1:', result.rawData);
-    });
     chrome.storage.local.get(['rawData'], (results) => {
+
         data = JSON.parse(results.rawData);
+        console.log(results.rawData);
         if (data) {
-            const data2 = data.flatMap(x => x.DanhSachDiem).flatMap(x => x.DanhSachDiemHK)
-                .filter(item => item.NotComputeAverageScore == false && item.DiemTK_4).map((item) => {
-                    return {
-                        CurriculumName: item.CurriculumName,
-                        credits: Number(item.Credits),
-                        grade: Number(item.DiemTK_4)
-                    }
-                })
+            const data2 = getFullListMark(data)
 
             const data3 = data.flatMap(
                 x => ({

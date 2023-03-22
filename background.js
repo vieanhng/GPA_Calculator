@@ -66,13 +66,7 @@ async function getGPA(token,ctdt){
         .then(response => response.json())
         .then((result) => {
                 chrome.storage.local.set({rawData: JSON.stringify(result)});
-                return result.flatMap(x=>x.DanhSachDiem).flatMap(x=>x.DanhSachDiemHK)
-                    .filter(item => item.NotComputeAverageScore == false && item.DiemTK_4).map( (item) => {
-                return {
-                    credits: Number(item.Credits),
-                    grade: Number(item.DiemTK_4)
-                }
-            })
+                return getFullListMark(result)
             }
         )
         .catch(error => console.log('error', error));
