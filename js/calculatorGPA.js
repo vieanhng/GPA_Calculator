@@ -14,22 +14,20 @@ function calculateGPA(grades) {
 }
 
 function getFullListMark(data){
-    return data.flatMap(x => x.DanhSachDiem).flatMap(x => x.DanhSachDiemHK)
+    const obj = {};
+
+    data.flatMap(x => x.DanhSachDiem).flatMap(x => x.DanhSachDiemHK)
         .filter(item => item.NotComputeAverageScore == false && item.DiemTK_4).map((item) => {
             return {
                 CurriculumID:item.CurriculumID,
                 credits: Number(item.Credits),
                 grade: Number(item.DiemTK_4)
             }
-        }).reduce((map, item) => {
-            if (!map.has(item.CurriculumID)) {
-                map.set(item.CurriculumID, item);
-            } else {
-                const existingItem = map.get(item.CurriculumID);
-                if (item.grade > existingItem.grade) {
-                    map.set(item.CurriculumID, item);
-                }
+        }).forEach(item => {
+            if (!obj[item.CurriculumID] || obj[item.CurriculumID].grade < item.grade) {
+                obj[item.CurriculumID] = item;
             }
-            return map;
-        }, new Map()).values()
+        });
+
+    return Object.values(obj);
 }
